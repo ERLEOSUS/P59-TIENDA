@@ -19,7 +19,7 @@ Factura::~Factura()
 void Factura::imprimirFactura()
 {
     QString str="";
-    str.append("\tTIENDA ABARROTES UPS \n");
+    str.append("\tTIENDA ABARROTES UPS\n");
     for(int i=0;i<70;i++){
         str.append("-");
     }

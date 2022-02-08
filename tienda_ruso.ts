@@ -74,6 +74,7 @@
     </message>
     <message>
         <location filename="tienda.ui" line="103"/>
+        <location filename="tienda.cpp" line="20"/>
         <source>Producto</source>
         <translation>продукт</translation>
     </message>
@@ -133,6 +134,36 @@
         <location filename="tienda.ui" line="293"/>
         <source>TOTAL:</source>
         <translation>ПОЛНОМ:</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="20"/>
+        <source>Cantidad</source>
+        <translation>количество</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="20"/>
+        <source>P. unitario</source>
+        <translation>П.унитарный</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="20"/>
+        <source>Subtotal</source>
+        <translation>Итого</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="39"/>
+        <source>Leche</source>
+        <translation>молоко</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="40"/>
+        <source>Pan</source>
+        <translation>хлеб</translation>
+    </message>
+    <message>
+        <location filename="tienda.cpp" line="41"/>
+        <source>Queso</source>
+        <translation>сыр</translation>
     </message>
 </context>
 </TS>

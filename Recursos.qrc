@@ -4,5 +4,7 @@
         <file>Recursos/carrito-de-compras.png</file>
         <file>Recursos/limpiar.png</file>
         <file>Recursos/tienda.png</file>
+        <file>Recursos/tienda_ruso.qm</file>
+        <file>tienda_ruso.qm</file>
     </qresource>
 </RCC>
