@@ -277,6 +277,25 @@ bool Tienda::validarUser()
 
 }
 
+void Tienda::limpiar()
+{
+        ui->inCedula->clear();
+        ui->inNombre->clear();
+        ui->inEmail->clear();
+        ui->inTelefono->clear();
+        ui->inDireccion->clear();
+        //Limpiar datos
+        ui->inCantidad->setValue(0);
+        ui->inProducto->setFocus();
+
+        int fila = ui->outDetalle->rowCount();
+        for(int i=0; i <= fila;){
+            ui->outDetalle->removeRow(fila);
+            fila--;
+        }
+
+}
+
 
 void Tienda::on_inProducto_currentIndexChanged(int index)
 {
@@ -339,3 +358,9 @@ void Tienda::on_btnFinalizar_released()
         factura->imprimirFactura();
         factura->show();}
 }
+
+void Tienda::on_btnFinalizar_2_clicked()
+{
+    limpiar();
+}
+

@@ -1,8 +1,11 @@
 #ifndef FACTURA_H
 #define FACTURA_H
 
-#include <QMainWindow>
-#include <iostream>
+#include <QDialog>
+#include <QDebug>
+#include <QDateTime>
+#include <QMessageBox>
+#include <QDir>
 
 #include "tienda.h"
 #include "cliente.h"
@@ -26,9 +29,13 @@ public:
 
 
 
+private slots:
+    void on_btnGuardar_clicked();
+
 private:
     Ui::Factura *ui;
     Cliente *m_cliente;
+    void guardar();
 
 };
 

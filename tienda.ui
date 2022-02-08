@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Tienda</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Recursos.qrc">
+    <normaloff>:/Recursos/tienda.png</normaloff>:/Recursos/tienda.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
@@ -147,6 +151,10 @@
             <property name="text">
              <string>Agregar</string>
             </property>
+            <property name="icon">
+             <iconset resource="Recursos.qrc">
+              <normaloff>:/Recursos/boton-agregar.png</normaloff>:/Recursos/boton-agregar.png</iconset>
+            </property>
            </widget>
           </item>
          </layout>
@@ -174,53 +182,56 @@
         <widget class="QWidget" name="widget_3" native="true">
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="0">
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>100</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="btnFinalizar">
+           <widget class="QPushButton" name="btnFinalizar_2">
             <property name="minimumSize">
              <size>
-              <width>131</width>
-              <height>50</height>
+              <width>107</width>
+              <height>51</height>
              </size>
             </property>
             <property name="font">
              <font>
               <family>Bahnschrift SemiBold</family>
-              <pointsize>10</pointsize>
+              <pointsize>8</pointsize>
               <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
             <property name="text">
-             <string>Finalizar Compra</string>
+             <string>Limpiar</string>
+            </property>
+            <property name="icon">
+             <iconset resource="Recursos.qrc">
+              <normaloff>:/Recursos/limpiar.png</normaloff>:/Recursos/limpiar.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btnFinalizar">
+            <property name="minimumSize">
+             <size>
+              <width>107</width>
+              <height>51</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Bahnschrift SemiBold</family>
+              <pointsize>8</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Finalizar </string>
+            </property>
+            <property name="icon">
+             <iconset resource="Recursos.qrc">
+              <normaloff>:/Recursos/carrito-de-compras.png</normaloff>:/Recursos/carrito-de-compras.png</iconset>
             </property>
            </widget>
           </item>
           <item row="0" column="2">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>13</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="3">
            <widget class="QWidget" name="widget_4" native="true">
             <layout class="QFormLayout" name="formLayout_3">
              <item row="0" column="0">
@@ -333,6 +344,8 @@ color: rgb(224, 27, 36);</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>

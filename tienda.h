@@ -30,6 +30,8 @@ private slots:
 
     void on_btnFinalizar_released();
 
+    void on_btnFinalizar_2_clicked();
+
 private:
 
     Ui::Tienda *ui;
@@ -43,5 +45,6 @@ private:
     bool verificarCI(QString as);
     bool agregarDatos();
     bool validarUser();
+    void limpiar();
 };
 #endif // TIENDA_H

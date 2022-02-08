@@ -41,3 +41,43 @@ void Factura::setCliente(Cliente *newCliente)
 {
     m_cliente = newCliente;
 }
+
+void Factura::on_btnGuardar_clicked()
+{
+    QDir direc;
+     qDebug()<<direc.home().mkdir("Documents/Tienda");
+
+     if(direc.home().mkdir("Documents/Tienda")){
+         guardar();
+
+     }else{
+         guardar();
+     }
+}
+
+void Factura::guardar()
+{
+
+    QDateTime c = QDateTime::currentDateTime();
+    QString nameFormat = c.toString("ddMMyyyy_hhmmss");
+    //Crear un archivo
+    QFile archivo(QDir::homePath() + "/Documents/Tienda/" + nameFormat + ".txt");
+
+    //Arbirlo para escritura
+    if(archivo.open(QFile::WriteOnly | QFile::Truncate)){
+        //Crear un stream de texto
+        QTextStream salida(&archivo);
+        salida << ui->outFactura->toPlainText();
+
+        QMessageBox::information(this,tr("Informacion"),tr("El archivo fue guardado con exito"));
+    }else{
+        //Mensaje si no se pudo guardar
+        QMessageBox::warning(this,
+                             tr("Guardar datos"),
+                             tr("No se pudo guardar el archivo"));
+    }
+
+    //Cerrar el archivo
+    archivo.close();
+}
+

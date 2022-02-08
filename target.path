@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1">
+<context>
+    <name>Factura</name>
+    <message>
+        <location filename="factura.ui" line="14"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="factura.ui" line="24"/>
+        <source>Guardar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="factura.cpp" line="72"/>
+        <source>Informacion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="factura.cpp" line="72"/>
+        <source>El archivo fue guardado con exito</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="factura.cpp" line="76"/>
+        <source>Guardar datos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="factura.cpp" line="77"/>
+        <source>No se pudo guardar el archivo</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Tienda</name>
+    <message>
+        <location filename="tienda.ui" line="14"/>
+        <source>Tienda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="40"/>
+        <source>Cliente</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="46"/>
+        <source>Cédula:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="56"/>
+        <location filename="tienda.ui" line="109"/>
+        <source>Nombre:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="66"/>
+        <source>Teléfono:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="76"/>
+        <source>E-mail:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="86"/>
+        <source>Dirección:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="103"/>
+        <source>Producto</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="119"/>
+        <source>Cantidad:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="129"/>
+        <source>Precio:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="136"/>
+        <source>0.00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="152"/>
+        <source>Agregar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="172"/>
+        <source>Detalle de la compra</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="201"/>
+        <source>Limpiar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="226"/>
+        <source>Finalizar </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="240"/>
+        <source>Subtotal:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="253"/>
+        <location filename="tienda.ui" line="276"/>
+        <location filename="tienda.ui" line="317"/>
+        <source>0.0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="263"/>
+        <source>IVA (12%):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="tienda.ui" line="293"/>
+        <source>TOTAL:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+</TS>
