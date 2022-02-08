@@ -18,12 +18,13 @@ int main(int argc, char *argv[])
     if(text == "Russian"){
 
         traducion.load(":/tienda_ruso.qm");
+    } else{
+         traducion.load(":/tienda_en.qm");
     }
 
-    if((text != "Russian") && (text != "Spanish")){
+    if((text != "Russian") && (text != "Spanish")&& (text != "English")){
         QMessageBox::warning(NULL,"Advertencia","No se encontro el idioma de su sistema operativo dentro de la base de datos, se cargara el idioma por defecto");
     }
-
     if(text != QLocale::Spanish){
         a.installTranslator(&traducion);
     }

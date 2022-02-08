@@ -26,6 +26,7 @@ FORMS += \
     tienda.ui
 TRANSLATIONS = \
     tienda_ruso.ts \
+    tienda_en.ts \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
