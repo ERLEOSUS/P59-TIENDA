@@ -13,15 +13,17 @@ public:
     const QString &cedula() const;
     void setCedula(const QString &newCedula);
 
-
     const QString &name() const;
     const QString &telefono() const;
     const QString &email() const;
     const QString &direccion() const;
 
+    QString m_productos;
+
 signals:
 
 private:
+
     QString m_cedula;
     QString m_name;
     QString m_telefono;

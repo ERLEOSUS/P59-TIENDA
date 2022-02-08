@@ -2,8 +2,12 @@
 #define FACTURA_H
 
 #include <QMainWindow>
+#include <iostream>
+
 #include "tienda.h"
 #include "cliente.h"
+
+using namespace std;
 
 namespace Ui {
 class Factura;
@@ -18,13 +22,12 @@ public:
     ~Factura();
 
     void imprimirFactura();
-
-
     void setCliente(Cliente *newCliente);
+
+
 
 private:
     Ui::Factura *ui;
-
     Cliente *m_cliente;
 
 };

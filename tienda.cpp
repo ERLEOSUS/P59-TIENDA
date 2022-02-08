@@ -28,6 +28,8 @@ Tienda::~Tienda()
 {
     delete ui;
 }
+
+
 /**
  * @brief Tienda::cargarProductos Carga la lista de productos de la tienda
  */
@@ -186,8 +188,95 @@ bool Tienda::agregarDatos()
     QString direccion = ui->inDireccion->toPlainText();
     m_cliente = new Cliente(cedula,nombre,telefono,email,direccion);
 
-    return true;
+    int filas=ui->outDetalle->rowCount();
+       int contador=0;
+       QString str="";
+       while(contador!=filas){
+           str.append(   ui->outDetalle->item(contador,0)->text()+"\t"+
+                         ui->outDetalle->item(contador,1)->text()+"\t"+
+                         ui->outDetalle->item(contador,2)->text()+"\t"+
+                         ui->outDetalle->item(contador,3)->text()+"\n\n");
+           contador++;
+       }
+       for(int i=0;i<3;i++){
+           str.append("\n");
+           for(int j=0;j<65;j++){
+               str.append(" ");
+           }
+           if(i==0){
+            str.append("SubTotal: "+ui->outSubtotal->text());}
+           if(i==1){
+            str.append("        IVA: "+ui->outIva->text());}
+           if(i==2){
+            str.append("      Total: "+ui->outTotal->text());}
+       }
+       if(contador==0){
+           return false;
+       }
+       m_cliente->m_productos=str;
+       return true;
 }
+
+bool Tienda::validarUser()
+{
+        bool flag = false;
+        QString ced = ui->inCedula->text();
+
+        //Validar si la cedula es consumidor final
+        if(ced == "9999999999"){
+            return true;
+        }
+
+        //Validar campos vacios
+        if(ui->inCedula->text() == ""){
+            flag = true;
+            ui->inCedula->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+        }
+        else{
+            ui->inCedula->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+        }
+        if(ui->inNombre->text() == ""){
+            flag = true;
+            ui->inNombre->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+        }else{
+            ui->inNombre->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+        }
+        if(ui->inTelefono->text() == ""){
+            flag = true;
+            ui->inTelefono->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+        }else{
+            ui->inTelefono->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+        }
+        if(ui->inEmail->text() == ""){
+            flag = true;
+            ui->inEmail->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+        }
+        else{
+            ui->inEmail->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+        }
+        if(ui->inDireccion->toPlainText() == ""){
+            flag = true;
+            ui->inDireccion->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+        }else{
+            ui->inDireccion->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+        }
+        if(flag){
+            ui->statusbar->showMessage("Falta de ingresar datos",5000);
+            return false;
+        }
+
+        if(verificarCI(ced)){
+            ui->inCedula->setStyleSheet("background-color: rgb(  255, 255, 255  );");
+            return true;
+        }else{
+            ui->inCedula->setStyleSheet("background-color: rgb( 255, 0, 0 );");
+            ui->statusbar->showMessage("Cedula incorrecta",5000);
+            return false;
+        }
+        return true;
+
+}
+
 
 void Tienda::on_inProducto_currentIndexChanged(int index)
 {
@@ -243,10 +332,10 @@ void Tienda::on_btnAgregar_released()
 }
 
 void Tienda::on_btnFinalizar_released()
-{   if(agregarDatos()){
-    Factura *factura=new Factura(this);
-    factura->setCliente(m_cliente);
-    factura->imprimirFactura();
-    factura->show();}
+{
+        if((validarUser() &&agregarDatos())==true){
+        Factura *factura=new Factura(this);
+        factura->setCliente(m_cliente);
+        factura->imprimirFactura();
+        factura->show();}
 }
-

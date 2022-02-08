@@ -24,7 +24,6 @@ public:
     Tienda(QWidget *parent = nullptr);
     ~Tienda();
 
-
 private slots:
     void on_inProducto_currentIndexChanged(int index);
     void on_btnAgregar_released();
@@ -32,6 +31,7 @@ private slots:
     void on_btnFinalizar_released();
 
 private:
+
     Ui::Tienda *ui;
     QList<Producto*> m_productos;
     Cliente *m_cliente;
@@ -42,5 +42,6 @@ private:
     void calcular(float stProducto);
     bool verificarCI(QString as);
     bool agregarDatos();
+    bool validarUser();
 };
 #endif // TIENDA_H
